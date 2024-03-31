@@ -7,6 +7,7 @@ import {
   Divider,
   TextField,
   Typography,
+  capitalize,
 } from "@mui/material";
 import React from "react";
 import AppleIcon from "@mui/icons-material/Apple";
@@ -20,7 +21,7 @@ const Signup = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "10%",
+          paddingTop: "9%",
           paddingBottom: "10%",
         }}
       >
@@ -28,7 +29,7 @@ const Signup = () => {
           sx={{
             width: "404px",
             height: "638px",
-            marginBottom: "0px",
+            marginTop:"10%",
             display: "flex",
             justifyContent: "flex-start",
             flexDirection: "column",
@@ -43,7 +44,7 @@ const Signup = () => {
               paddingBottom: "10px",
             }}
           >
-            <Typography variant="h4">Get Started Now</Typography>
+            <Typography variant="h5" sx={{fontWeight:"bold"}}>Get Started Now</Typography>
           </Box>
           <Box>
             <label htmlFor="Label">
@@ -115,7 +116,10 @@ const Signup = () => {
           >
             <Checkbox />
             <Typography>
-              I agree to the <a href="">terms & policy</a>
+              I agree to the{" "}
+              <a href="" style={{ color: "#000000" }}>
+                terms & policy
+              </a>
             </Typography>
           </Box>
 
@@ -126,13 +130,14 @@ const Signup = () => {
                 backgroundColor: "#3A5B22",
                 color: "white",
                 minWidth: "100%",
+                textTransform: "capitalize"
               }}
             >
-              <b>Signup</b>
+              <b>{capitalize("Signup")}</b>
             </Button>
           </Box>
 
-          <Box sx={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Box sx={{ marginTop: "15%", marginBottom: "15%",fontSize:"15px" }}>
             <Divider>Or</Divider>
           </Box>
 
@@ -150,6 +155,7 @@ const Signup = () => {
                   backgroundColor: "none",
                   color: "black",
                   fontSize: "12px",
+                  border: "1px solid lightgrey",
                 }}
               >
                 Sign in with Google
@@ -164,6 +170,7 @@ const Signup = () => {
                   color: "black",
                   backgroundColor: "none",
                   fontSize: "12px",
+                  border: "1px solid lightgrey",
                 }}
               >
                 Sign in with Apple
@@ -176,9 +183,21 @@ const Signup = () => {
               marginBottom: "20px", // Add some space between the "Get Started Now" box and the "Have an Account? Sign In" box
             }}
           >
-            <Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+              }}
+            >
               <p>
-                Have an Account?<a href="">Sign In</a>
+                <b>
+                  Have an account?{" "}
+                  <a
+                    href=""
+                    style={{ textDecoration: "none", color: "#0F3DDE" }}
+                  >
+                    Sign In
+                  </a>
+                </b>
               </p>
             </Typography>
           </Box>

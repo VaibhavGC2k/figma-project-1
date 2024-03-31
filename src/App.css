@@ -1,7 +1,7 @@
 .Main {
   display: flex;
   flex-direction: row;
-  background-color: rgb(236, 210, 176);
+  /* background-color: rgb(236, 210, 176); */
   max-height: fit-content;
   height: 100%;
   margin: 0;
@@ -13,14 +13,14 @@
 }
 
 .Image {
-  width: 50%;
-  height: auto; /* Set height to auto to maintain aspect ratio */
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  overflow: hidden; /* Hide any overflow to prevent distortion */
+  max-width: 781.5px;
+  height: 1042px;
+  overflow: hidden;
 }
 
 img {
   max-width: 100%;
-  height: auto; /* Let the height adjust automatically */
+  height: auto;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
 }
