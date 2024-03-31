@@ -1,0 +1,26 @@
+.Main {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(236, 210, 176);
+  max-height: fit-content;
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  width: 50%;
+  min-height: 100%;
+}
+
+.Image {
+  width: 50%;
+  height: auto; /* Set height to auto to maintain aspect ratio */
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden; /* Hide any overflow to prevent distortion */
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Let the height adjust automatically */
+}
